@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: complete e2e pipeline
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: complete e2e app
+  template:
+    metadata:
+      labels:
+        app: complete e2e app
+    spec:
+      containers:
+      - name: complete e2e pipeline
+        image: mayank56/complete-cicd-e2e-pipeline
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080

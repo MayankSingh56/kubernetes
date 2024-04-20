@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: complete e2e pipeline
+  name: complete-e2e-app
 
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: complete e2e app
+      app: complete-e2e-app
   template:
     metadata:
       labels:
-        app: complete e2e app
+        app: complete-e2e-app
     spec:
       containers:
-      - name: complete e2e pipeline
+      - name: complete-e2e-app
         image: mayank56/complete-cicd-e2e-pipeline:1.0.0-16
         resources:
           limits:

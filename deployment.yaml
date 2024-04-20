@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: complete e2e pipeline
-        image: mayank56/complete-cicd-e2e-pipeline
+        image: mayank56/complete-cicd-e2e-pipeline:1.0.0-16
         resources:
           limits:
             memory: "256Mi"
